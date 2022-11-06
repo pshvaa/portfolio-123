@@ -1,4 +1,19 @@
+:root{
+    --span-color:#FF8A56;
+}
+
 @import url(./_reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+*{
+    text-decoration: none;
+    /* outline: 1px solid red; */
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+}
 
 .overlay{
    position: fixed;
@@ -47,9 +62,23 @@
     align-items: center;
 }
 
+.header > .logo img{
+    padding-left: 112.5px;
+}
+
 .fa-bars{
     display: none;
     align-items: center;
+}
+
+.header .nav-links a{
+    padding-left: 35px;
+    color: #000;
+}
+
+.header > .nav-links a img{
+    padding: 0 81px 0 8.5px;
+    
 }
 
 @media(max-width: 768px) {
@@ -61,4 +90,85 @@
         display: none;
     }
 }
+
+/* Introsection starts */
+.introsection{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 112.5px;
+}
+
+.introsection-left{
+    padding-top: 117px;
+    min-width: 359px;
+    display: flex;
+    flex-direction: column;
+}
+
+.introsection-left h1{
+    font-size: 72px;
+}
+
+/* descendant selector h1 span */
+.introsection-left > h1 span{
+    color: var(--span-color);
+}
+
+.introsection-left small{
+    width: 100%;
+    font-size: 22px;
+    color: #666;
+}
+
+.introsection-left .button-groups{
+    margin-top: 24px;
+}
+
+
+.introsection-left .button-groups button{
+    width: 151px;
+    height: 58px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.introsection-left a{
+    color:#000;
+    margin-left: 34px;
+}
+.introsection-right{
+    padding-top: 70px;
+    min-width: 376px;
+}
+
+.introsection-right img{
+    width: 100%;
+}
+
+@media(max-width:1341px){
+    .introsection{
+        padding: 0;
+    }
+
+    .introsection-left{
+        margin: 0 auto;
+    }
+
+}
+
+@media(max-width:637px){
+    .introsection{
+        text-align: center;
+    }
+
+    .introsection-left{
+        padding-top: 40px;
+    }
+}
+
+/* Introsection ends */
+
 
